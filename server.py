@@ -17,7 +17,7 @@ PACKAGES = {
     "100": "30Day"
 }
 
-@app.route('https://mikrotik-bkash-autologin.onrender.com/payment-callback', methods=['POST'])
+@app.route('/payment-callback', methods=['POST'])
 def payment_callback():
     data = request.json
     trx_id = data.get("trxID")
